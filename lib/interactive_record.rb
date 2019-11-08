@@ -23,7 +23,7 @@ class InteractiveRecord
       @id = nil
     end
     
-    def table_for_insert
+    def table_name_for_insert
       self.class.table_name
     end
   end
