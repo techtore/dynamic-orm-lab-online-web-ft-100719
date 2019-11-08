@@ -7,6 +7,8 @@ class InteractiveRecord
   end
   
   def self.column_names
+    sql = "pragma table_info ('#{table_names}')"
+    
     table_info = DB[:conn].execute(sql)
     column_names = []
     table_info.each do |column|
