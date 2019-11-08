@@ -7,6 +7,11 @@ class InteractiveRecord
   end
   
   def self.column_names
-    
+    table_info = DV[:conn].execute(sql)
+    column_names = []
+    table_info.each do |column|
+      column_names << column["name"]
+    end
+    column_names.compact
   end
 end
