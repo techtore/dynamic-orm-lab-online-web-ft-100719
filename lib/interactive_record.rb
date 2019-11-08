@@ -7,7 +7,7 @@ class InteractiveRecord
   end
   
   def self.column_names
-    table_info = DV[:conn].execute(sql)
+    table_info = DB[:conn].execute(sql)
     column_names = []
     table_info.each do |column|
       column_names << column["name"]
