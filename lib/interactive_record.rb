@@ -22,5 +22,9 @@ class InteractiveRecord
       self.send("#{key}=", value) unless value.nil?
       @id = nil
     end
+    
+    def table_for_insert
+      self.table_name
+    end
   end
 end
